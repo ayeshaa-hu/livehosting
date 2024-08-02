@@ -1,0 +1,82 @@
+html>
+
+<head>
+<script type= "text/javascript">
+function Submit_Form()
+
+    {
+    str1= document.fm.fname.value;
+
+    if(str1.length == 0)
+    {
+
+    alert("enter first name");
+
+    }
+
+    str2 = document.fm.lname.value;
+
+    if(str2.length == 0)
+    {   
+    alert("enter last name");
+    }
+
+    if(document.fm.city.selectedIndex == 0)
+    {
+
+    alert("select your city");
+
+    }
+    reg =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    var addr=document.fm.email.value;
+    if(reg.test(addr) == false)
+
+    {
+    alert("invalid email address");
+    }
+    else{
+        alert
+    }
+
+}
+
+
+
+</script>
+</head>
+
+
+
+<body>
+<b><i>
+<form name=fm>
+    First Name:
+    <input type=text name=fname >
+    <br>
+    Last Name: 
+    <input type=text name=lname >
+    <br>
+    
+    Email
+    <input type=text name=email size=30>
+    <br>
+    City
+    <select name=city>
+    <option value="">Select City</option>
+    <option value="Islamabad">Islamabad</option>
+    <option value="Peshawar">Peshawar</option>
+    <option value="Quetta">Quetta</option>
+    <option value="Lahore">Lahore</option>
+    <option value="Karachi">Karachi</option>        
+    </select>
+    <br>
+    Comments:
+    <br>
+    <textarea rows=5 cols=25></textarea>
+    <br>
+    <input type=button name=btn value=Register onclick=Submit_Form()>
+    <input type=reset name=reset Value=Reset>
+</form>
+</body>
+</html>
